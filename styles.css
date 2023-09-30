@@ -1,18 +1,22 @@
-/* Apply margin to the container */
+/* styles.css */
+
 #container {
   margin: 20px;
+  position: relative;
 }
 
-/* Insert content before the main content */
-#container::before {
-  content: "Before Content";
-  color: #f00; /* Red color */
-  font-size: 20px;
-}
-
-/* Insert content after the main content */
+#container::before,
 #container::after {
-  content: "After Content";
-  color: #f00; /* Red color */
+  content: "This is the main container element";
+  color: red;
   font-size: 20px;
+  position: absolute;
+}
+
+#container::before {
+  top: -30px;
+}
+
+#container::after {
+  bottom: -30px;
 }
